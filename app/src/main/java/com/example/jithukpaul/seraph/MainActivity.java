@@ -2,6 +2,8 @@ package com.example.jithukpaul.seraph;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.Toast;
+
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
 import java.io.InputStreamReader;
@@ -55,6 +57,6 @@ public class MainActivity extends AppCompatActivity {
         wr.flush();
         wr.close();
 
-        System.out.println(auth.getResponseCode());
+        Toast.makeText(this,auth.getResponseCode(),Toast.LENGTH_LONG).show();
     }
 }
